@@ -6,9 +6,9 @@ import asyncio
 
 # Replace 'YOUR_API_ID', 'YOUR_API_HASH', and 'YOUR_BOT_TOKEN' with your actual values
 
-API_ID = ''
-API_HASH = ''
-BOT_TOKEN = ''
+API_ID = '17095753'
+API_HASH = '19a412647f01e0c04bb246b04c9d6f69'
+BOT_TOKEN = '6300008988:AAF1YnOPHCFaLgJEwp-JnS8vkUT8lkFHdjU'
 
 # Create a Pyrogram client
 app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
@@ -17,7 +17,7 @@ app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 @app.on_message(filters.command("start"))
 def start(client, message):
     user = message.from_user
-    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.")
+    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2")
 
 # Help command handler
 @app.on_message(filters.command("help"))
@@ -29,7 +29,7 @@ To upload a YouTube video, simply send me the YouTube link.
     
 Enjoy using the bot!
 
-   ©️ Channel : @NT_BOT_CHANNEL
+   ⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2
     """
     message.reply_text(help_text)
 
@@ -58,7 +58,7 @@ async def process_youtube_link(client, message):
         await uploading_msg.delete()
 
         # Send successful upload message
-        await message.reply_text("\n\nOWNER : @LISA_FAN_LK 💕\n\nSUCCESSFULLY UPLOADED!")
+        await message.reply_text("\n\nSUCCESSFULLY UPLOADED!\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2")
 
     except Exception as e:
         error_text = 'Error: Failed to process the YouTube link. Please make sure the link is valid and try again.'

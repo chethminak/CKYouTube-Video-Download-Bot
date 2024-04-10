@@ -17,19 +17,19 @@ app = Client("my_bot", api_id=API_ID, api_hash=API_HASH, bot_token=BOT_TOKEN)
 @app.on_message(filters.command("start"))
 def start(client, message):
     user = message.from_user
-    message.reply_text(f"Hello, @{user.username}!\n\nSend me the YouTube link of the video you want to upload.\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2")
+    message.reply_text(f"<b>ʜᴇʏ @{user.username} !\n\nɪ ᴀᴍ ᴘᴏᴡᴇʀꜰᴜʟ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ. ɪ ᴄᴀɴ ᴅᴏᴡɴʟᴏᴀᴅ ᴀɴʏ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ. ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ ᴏꜰ ᴛʜᴇ ᴠɪᴅᴇᴏ ʏᴏᴜ ᴡᴀɴᴛ ᴛᴏ ᴜᴘʟᴏᴀᴅ...♻️\n\n👨🏻‍💻ᴅᴇᴠʟᴏᴘᴇʀ - <a href=https://telegram.me/KING_WMP>Chethmina Kavishan</a>
+⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ - <a href=https://telegram.me/CK4U2>CK4U2</a></b>")
 
 # Help command handler
 @app.on_message(filters.command("help"))
 def help(client, message):
-    help_text = """
-    Welcome to the YouTube Video Uploader Bot!
+    help_text = """<b>ᴡᴇʟᴄᴏᴍᴇ ᴛᴏ ᴛʜᴇ ʏᴛ ᴠɪᴅᴇᴏ ᴅᴏᴡɴʟᴏᴀᴅᴇʀ ʙᴏᴛ💗
 
-To upload a YouTube video, simply send me the YouTube link.
-    
-Enjoy using the bot!
+ᴛᴏ ᴜᴘʟᴏᴀᴅ ᴀ ʏᴏᴜᴛᴜʙᴇ ᴠɪᴅᴇᴏ, ꜱɪᴍᴘʟʏ ꜱᴇɴᴅ ᴍᴇ ᴛʜᴇ ʏᴏᴜᴛᴜʙᴇ ʟɪɴᴋ.
 
-   ⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2
+ᴇɴᴊᴏʏ ᴜꜱɪɴɢ ᴛʜᴇ ʙᴏᴛ💥
+
+⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ <i><a href=https://telegram.me/CK4U2>CK4U2</a></i></b>
     """
     message.reply_text(help_text)
 
@@ -58,7 +58,7 @@ async def process_youtube_link(client, message):
         await uploading_msg.delete()
 
         # Send successful upload message
-        await message.reply_text("\n\nSUCCESSFULLY UPLOADED!\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ @CK4U2")
+        await message.reply_text("\n\n⚡ᴘᴏᴡᴇʀᴇᴅ ʙʏ <i><a href=https://telegram.me/CK4U2>CK4U2</a></i></b>")
 
     except Exception as e:
         error_text = 'Error: Failed to process the YouTube link. Please make sure the link is valid and try again.'
